@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>您的网站标题</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: lightgreen;
+    }
+    .container {
+        display: flex;
+    }
+    .menu {
+        flex: 1;
+        max-width: 200px; /* Set maximum width for the menu */
+        background-image: url('pictures/main_bkg.png'); /* Background image for menu */
+        background-size: cover;
+        color: white;
+        padding: 20px;
+        border-right: 2px solid white; /* Add border to the right side */
+    }
+    .menu a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+    }
+    .content {
+        flex: 3;
+        padding: 20px;
+        background-image: url('pictures/main_bkg.png'); /* Background image for main content */
+        background-size: cover;
+        color: white;
+    }
+    /* Mobile Menu Styles */
+    .mobile-menu {
+        display: none;
+    }
+    @media only screen and (max-width: 600px) {
+        .menu {
+            display: none;
+        }
+        .mobile-menu {
+            display: block;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="menu">
+        <h2>菜单</h2>
+        <ul>
+            <li><a href="index.html">介绍</a></li>
+            <li><a href="picture.html">摘要</a></li>
+            <li><a href="picturesecret.html">照片</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <!-- Your main content goes here -->
+        <h1>欢迎来到我的网站</h1>
+        <p>这里是主要内容区域。您可以在这里添加您的文本、图片和其他元素。</p>
+
+	</br></br></br>	</br></br></br>	</br></br></br>	</br></br></br>
+	</br></br></br>	</br></br></br>	</br></br></br>	</br></br></br>
+	</br></br></br>	</br></br></br>	</br></br></br>	</br></br></br>
+
+
+	
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <h2>菜单</h2>
+        <button onclick="toggleMenu()">☰</button>
+        <ul id="mobileMenu">
+            <li><a href="index.html">介绍</a></li>
+           <li><a href="picture.html">摘要</a></li>
+            <li><a href="picturesecret.html">照片</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    function toggleMenu() {
+        var mobileMenu = document.getElementById("mobileMenu");
+        if (mobileMenu.style.display === "block") {
+            mobileMenu.style.display = "none";
+        } else {
+            mobileMenu.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
